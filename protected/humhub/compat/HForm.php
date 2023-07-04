@@ -180,8 +180,6 @@ class HForm extends \yii\base\Component
         $output = "<fieldset class='" . $class . "'>";
         if (isset($element['title'])) {
             $output .= "<legend>" . $element['title'] . "</legend>";
-        } else {
-            #$output .= "Untitled Form";
         }
         return $output;
     }
