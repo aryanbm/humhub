@@ -213,7 +213,7 @@ class BasePermission extends BaseObject
      */
     public function hasId($id)
     {
-        return ($this->getId() == $id);
+        return $this->getId() == $id;
     }
 
     /**
