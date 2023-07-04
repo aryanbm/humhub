@@ -101,7 +101,8 @@ class ArrayObject implements IteratorAggregate, ArrayAccess, Countable
     {
         $this->message = '$key is a protected property, use a different key';
         if ($this->flag == self::ARRAY_AS_PROPS) {
-            return $this->offsetSet($key, $value);
+            $this->offsetSet($key, $value);
+            return;
         }
         if (in_array($key, $this->protectedProperties)) {
             throw new InvalidArgumentException($this->message);
